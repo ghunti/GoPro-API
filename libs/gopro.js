@@ -230,10 +230,10 @@ GoProException.prototype = new Error();
 
 // Camera Mode
 // Sets the mode of the camera
-// VIDEO: http://10.5.5.9/bacpac/CM?t=[password]&p=%00, 
-// PHOTO: http://10.5.5.9/bacpac/CM?t=[password]&p=%01, 
-// BURST: http://10.5.5.9/bacpac/CM?t=[password]&p=%02, 
-// TIMER: http://10.5.5.9/bacpac/CM?t=[password]&p=%03
+// VIDEO: http://10.5.5.9/camera/CM?t=[password]&p=%00, 
+// PHOTO: http://10.5.5.9/camera/CM?t=[password]&p=%01, 
+// BURST: http://10.5.5.9/camera/CM?t=[password]&p=%02, 
+// TIMER: http://10.5.5.9/camera/CM?t=[password]&p=%03
     GoPro.prototype.setCameraMode = function (mode) {
         if (GoPro.CameraMode.inEnum(mode)) {
             return this.deviceCall('camera', 'CM', mode);
@@ -242,10 +242,10 @@ GoProException.prototype = new Error();
 
 // Default Camera Mode
 // Sets the default mode of the camera
-// VIDEO: http://10.5.5.9/bacpac/DM?t=[password]&p=%00, 
-// PHOTO: http://10.5.5.9/bacpac/DM?t=[password]&p=%01, 
-// BURST: http://10.5.5.9/bacpac/DM?t=[password]&p=%02, 
-// TIMER: http://10.5.5.9/bacpac/DM?t=[password]&p=%03
+// VIDEO: http://10.5.5.9/camera/DM?t=[password]&p=%00, 
+// PHOTO: http://10.5.5.9/camera/DM?t=[password]&p=%01, 
+// BURST: http://10.5.5.9/camera/DM?t=[password]&p=%02, 
+// TIMER: http://10.5.5.9/camera/DM?t=[password]&p=%03
     GoPro.prototype.setDefaultCameraMode = function (mode) {
         if (GoPro.CameraMode.inEnum(mode)) {
             return this.deviceCall('camera', 'DM', mode);
